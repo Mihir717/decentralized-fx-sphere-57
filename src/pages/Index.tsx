@@ -38,15 +38,9 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white text-slate-900">
       <Navbar />
-      <PriceTicker />
       <main>
         <HeroSection />
         <TradingAssets />
-        <DecentralizedEngine />
-        <KeyBenefits />
-        <Security />
-        <Platforms />
-        <Community />
       </main>
       <Footer />
     </div>

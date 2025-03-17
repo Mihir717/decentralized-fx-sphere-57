@@ -72,7 +72,7 @@ const HeroSection: React.FC = () => {
           </h1>
           
           <p className="paragraph mt-6 max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '400ms'}}>
-            Flux FX delivers unprecedented transparency and control in FX trading through decentralized technology. Experience low spreads, instant withdrawals, and full asset ownership with no KYC requirements.
+            Trade Forex & Commodities with complete transparency, security, and no intermediaries. Experience the future of decentralized FX trading
           </p>
           
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 animate-fade-in-up" style={{animationDelay: '600ms'}}>
@@ -92,8 +92,8 @@ const HeroSection: React.FC = () => {
                 <Wallet className="h-6 w-6 text-fluxfx-600" />
               </div>
             </div>
-            <h3 className="text-lg font-semibold mb-2">Web3 Integration</h3>
-            <p className="text-sm text-muted-foreground">Connect with your favorite Web3 wallet for seamless trading</p>
+            <h3 className="text-lg font-semibold mb-2">Instant Withdrawals</h3>
+            <p className="text-sm text-muted-foreground">No waiting periods - your funds, your control</p>
           </div>
           
           <div className="glass-card rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:scale-105">

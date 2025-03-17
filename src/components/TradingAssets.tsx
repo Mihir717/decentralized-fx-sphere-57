@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { 
-  CreditCard, 
   RefreshCw, 
   DollarSign, 
   Euro, 
@@ -12,6 +11,7 @@ import {
   Gem,
   Bitcoin
 } from 'lucide-react';
+import PriceTicker from './PriceTicker';
 
 const forexPairs = [
   { name: 'EUR/USD', description: 'Euro / US Dollar', icon: <Euro className="w-8 h-8 text-fluxfx-600" /> },
@@ -40,6 +40,11 @@ const TradingAssets: React.FC = () => {
           <p className="paragraph max-w-2xl mx-auto">
             Trade a wide range of forex pairs and commodities with competitive spreads and deep liquidity.
           </p>
+        </div>
+
+        {/* Price Ticker placed above Forex Pairs section */}
+        <div className="mb-12">
+          <PriceTicker />
         </div>
 
         <div className="grid gap-12 md:gap-16">
