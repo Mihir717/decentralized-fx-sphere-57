@@ -1,6 +1,5 @@
-
 import React, { useState } from 'react';
-import { Network, DatabaseZap, Maximize, Lock, Refresh, ShieldCheck } from 'lucide-react';
+import { Network, DatabaseZap, Maximize, Lock, RefreshCw, ShieldCheck } from 'lucide-react';
 
 const DecentralizedEngine: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);

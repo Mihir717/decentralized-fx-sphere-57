@@ -6,17 +6,17 @@ import {
   DollarSign, 
   Euro, 
   PoundSterling, 
-  Yen, 
+  yen, 
   TrendingUp,
   Droplet,
-  Gold,
+  Gem,
   Bitcoin
 } from 'lucide-react';
 
 const forexPairs = [
   { name: 'EUR/USD', description: 'Euro / US Dollar', icon: <Euro className="w-8 h-8 text-fluxfx-600" /> },
   { name: 'GBP/USD', description: 'British Pound / US Dollar', icon: <PoundSterling className="w-8 h-8 text-fluxfx-600" /> },
-  { name: 'USD/JPY', description: 'US Dollar / Japanese Yen', icon: <Yen className="w-8 h-8 text-fluxfx-600" /> },
+  { name: 'USD/JPY', description: 'US Dollar / Japanese Yen', icon: <yen className="w-8 h-8 text-fluxfx-600" /> },
   { name: 'USD/CHF', description: 'US Dollar / Swiss Franc', icon: <DollarSign className="w-8 h-8 text-fluxfx-600" /> },
   { name: 'AUD/USD', description: 'Australian Dollar / US Dollar', icon: <DollarSign className="w-8 h-8 text-fluxfx-600" /> },
   { name: 'USD/CAD', description: 'US Dollar / Canadian Dollar', icon: <DollarSign className="w-8 h-8 text-fluxfx-600" /> },
@@ -25,7 +25,7 @@ const forexPairs = [
 ];
 
 const commodities = [
-  { name: 'XAU/USD', description: 'Gold / US Dollar', icon: <Gold className="w-8 h-8 text-fluxfx-600" /> },
+  { name: 'XAU/USD', description: 'Gold / US Dollar', icon: <Gem className="w-8 h-8 text-fluxfx-600" /> },
   { name: 'XAG/USD', description: 'Silver / US Dollar', icon: <Bitcoin className="w-8 h-8 text-fluxfx-600" /> },
   { name: 'WTI/USD', description: 'Crude Oil WTI / US Dollar', icon: <Droplet className="w-8 h-8 text-fluxfx-600" /> },
   { name: 'BRENT/USD', description: 'Crude Oil Brent / US Dollar', icon: <Droplet className="w-8 h-8 text-fluxfx-600" /> },
