@@ -1,12 +1,54 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useState, useEffect } from 'react';
+import Navbar from '@/components/Navbar';
+import PriceTicker from '@/components/PriceTicker';
+import HeroSection from '@/components/HeroSection';
+import TradingAssets from '@/components/TradingAssets';
+import DecentralizedEngine from '@/components/DecentralizedEngine';
+import KeyBenefits from '@/components/KeyBenefits';
+import Security from '@/components/Security';
+import Platforms from '@/components/Platforms';
+import Community from '@/components/Community';
+import Footer from '@/components/Footer';
 
 const Index = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading assets
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className="fixed inset-0 bg-fluxfx-900 flex flex-col items-center justify-center z-50">
+        <div className="flex items-center mb-8">
+          <span className="text-4xl font-bold text-fluxfx-400">Flux</span>
+          <span className="text-4xl font-bold text-white">FX</span>
+        </div>
+        <div className="w-16 h-16 border-4 border-fluxfx-200 border-t-fluxfx-500 rounded-full animate-spin"></div>
       </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <PriceTicker />
+      <main>
+        <HeroSection />
+        <TradingAssets />
+        <DecentralizedEngine />
+        <KeyBenefits />
+        <Security />
+        <Platforms />
+        <Community />
+      </main>
+      <Footer />
     </div>
   );
 };
