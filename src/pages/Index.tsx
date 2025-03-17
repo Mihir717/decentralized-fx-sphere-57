@@ -36,7 +36,7 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-white text-slate-900">
       <Navbar />
       <PriceTicker />
       <main>
