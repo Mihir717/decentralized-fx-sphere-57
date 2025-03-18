@@ -63,11 +63,11 @@ const HeroSection: React.FC = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Enhanced FluxFX logo - single blue color */}
+          {/* Enhanced FluxFX logo - fully blue */}
           <div className="mb-10 flex items-center justify-center">
             <div className="inline-flex items-center py-3 px-6">
               <span className="text-5xl font-bold text-fluxfx-500 mr-1">Flux</span>
-              <span className="text-5xl font-bold text-white">FX</span>
+              <span className="text-5xl font-bold text-fluxfx-500">FX</span>
             </div>
           </div>
           
