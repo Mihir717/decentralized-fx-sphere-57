@@ -63,19 +63,20 @@ const HeroSection: React.FC = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Enhanced FluxFX logo - fully blue */}
+          {/* Enhanced FluxFX logo - dark blue */}
           <div className="mb-10 flex items-center justify-center">
             <div className="inline-flex items-center py-3 px-6">
-              <span className="text-5xl font-bold text-fluxfx-500 mr-1">Flux</span>
-              <span className="text-5xl font-bold text-fluxfx-500">FX</span>
+              <span className="text-6xl font-bold text-fluxfx-700 mr-1">Flux</span>
+              <span className="text-6xl font-bold text-fluxfx-700">FX</span>
             </div>
           </div>
           
-          <span className="inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-fluxfx-100 text-fluxfx-800 mb-6 animate-fade-in">
+          <span className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-full bg-fluxfx-100 text-fluxfx-800 mb-6 animate-fade-in">
             Decentralising the Centralised
           </span>
           
-          <h1 className="heading-xl text-gradient animate-fade-in-up" style={{animationDelay: '200ms'}}>
+          {/* Adjusted heading with padding to ensure full visibility of letters */}
+          <h1 className="heading-xl text-gradient animate-fade-in-up pb-2" style={{animationDelay: '200ms'}}>
             Decentralising the Centralised
           </h1>
           

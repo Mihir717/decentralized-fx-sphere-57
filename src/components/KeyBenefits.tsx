@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   BanknoteIcon,
@@ -86,7 +85,7 @@ const KeyBenefits: React.FC = () => {
     <section id="benefits" className="section-padding relative overflow-hidden bg-slate-50">
       <div className="container mx-auto container-padding">
         <div className="text-center mb-16">
-          <span className="inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-fluxfx-100 text-fluxfx-800 mb-4">
+          <span className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-full bg-fluxfx-100 text-fluxfx-800 mb-4">
             Why Choose Flux FX
           </span>
           <h2 className="heading-lg mb-4">Key Benefits</h2>

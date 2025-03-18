@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Network, DatabaseZap, Maximize, Lock, RefreshCw, ShieldCheck } from 'lucide-react';
 
@@ -39,7 +40,8 @@ const DecentralizedEngine: React.FC = () => {
       <div className="container mx-auto container-padding relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div>
-            <span className="inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-fluxfx-100 text-fluxfx-800 mb-4">
+            {/* Increased size of the category button */}
+            <span className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-full bg-fluxfx-100 text-fluxfx-800 mb-4">
               Innovative Technology
             </span>
             <h2 className="heading-lg mb-6">Decentralized Trading Engine</h2>
