@@ -31,7 +31,7 @@ export default {
           200: "#bae0fd",
           300: "#7ecafb",
           400: "#37abf7",
-          500: "#0d8ce9",
+          500: "#1EAEDB", // Updated to a brighter blue
           600: "#006fc7",
           700: "#0059a2",
           800: "#004a86",

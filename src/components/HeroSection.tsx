@@ -63,10 +63,10 @@ const HeroSection: React.FC = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Enhanced FluxFX logo */}
+          {/* Enhanced FluxFX logo - single blue color */}
           <div className="mb-10 flex items-center justify-center">
-            <div className="inline-flex items-center bg-white/10 backdrop-blur-sm py-3 px-6 rounded-full border border-fluxfx-200/20 shadow-lg">
-              <span className="text-5xl font-bold bg-gradient-to-r from-fluxfx-500 to-fluxfx-600 bg-clip-text text-transparent mr-1">Flux</span>
+            <div className="inline-flex items-center py-3 px-6">
+              <span className="text-5xl font-bold text-fluxfx-500 mr-1">Flux</span>
               <span className="text-5xl font-bold text-white">FX</span>
             </div>
           </div>
@@ -76,7 +76,7 @@ const HeroSection: React.FC = () => {
           </span>
           
           <h1 className="heading-xl text-gradient animate-fade-in-up" style={{animationDelay: '200ms'}}>
-            Trade Forex & Commodities with Complete Sovereignty
+            Decentralising the Centralised
           </h1>
           
           <p className="paragraph mt-6 max-w-2xl mx-auto animate-fade-in-up" style={{animationDelay: '400ms'}}>
