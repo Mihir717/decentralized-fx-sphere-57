@@ -16,6 +16,7 @@ const initialPrices: Price[] = [
   { symbol: 'AUD/USD', price: '0.6601', change: 0.15 },
   { symbol: 'USD/CAD', price: '1.3642', change: -0.03 },
   { symbol: 'NZD/USD', price: '0.5981', change: 0.07 },
+  { symbol: 'USD/SEK', price: '10.752', change: -0.04 },
   { symbol: 'XAU/USD', price: '2322.45', change: 0.42 },
   { symbol: 'XAG/USD', price: '27.35', change: -0.18 },
   { symbol: 'WTI/USD', price: '78.26', change: 0.33 },

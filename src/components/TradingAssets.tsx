@@ -66,10 +66,6 @@ const TradingAssets: React.FC = () => {
                       <p className="text-sm text-muted-foreground">{pair.description}</p>
                     </div>
                   </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Spread from</span>
-                    <span className="font-semibold text-green-600">0.5 pips</span>
-                  </div>
                 </div>
               ))}
             </div>
@@ -92,10 +88,6 @@ const TradingAssets: React.FC = () => {
                       <h4 className="font-bold text-lg">{commodity.name}</h4>
                       <p className="text-sm text-muted-foreground">{commodity.description}</p>
                     </div>
-                  </div>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-muted-foreground">Spread from</span>
-                    <span className="font-semibold text-green-600">0.8 pips</span>
                   </div>
                 </div>
               ))}
