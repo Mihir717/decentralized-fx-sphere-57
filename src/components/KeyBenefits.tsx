@@ -91,6 +91,13 @@ const KeyBenefits: React.FC = () => {
   const primaryBenefits = benefits.filter(benefit => benefit.isHighlighted);
   const secondaryBenefits = benefits.filter(benefit => !benefit.isHighlighted);
 
+  const handleSeeAllFeaturesClick = () => {
+    const allTabTrigger = document.querySelector('[data-value="all"]') as HTMLElement;
+    if (allTabTrigger) {
+      allTabTrigger.click();
+    }
+  };
+
   return (
     <section id="benefits" className="section-padding relative overflow-hidden bg-gradient-to-b from-white to-slate-50">
       <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-slate-100/80 to-transparent pointer-events-none" />
@@ -130,7 +137,7 @@ const KeyBenefits: React.FC = () => {
               <Button 
                 variant="outline" 
                 className="rounded-full px-6 border-fluxfx-200 hover:bg-fluxfx-50 text-fluxfx-700"
-                onClick={() => document.querySelector('[data-value="all"]')?.click()}
+                onClick={handleSeeAllFeaturesClick}
               >
                 See all features
               </Button>
