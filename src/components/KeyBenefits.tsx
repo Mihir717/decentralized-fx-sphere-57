@@ -22,10 +22,10 @@ interface BenefitCardProps {
 }
 
 const BenefitCard: React.FC<BenefitCardProps> = ({ icon, title, description, isHighlighted = false }) => (
-  <Card className={`h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-none ${
+  <Card className={`h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 ${
     isHighlighted 
-      ? 'bg-gradient-to-br from-fluxfx-500/10 to-fluxfx-600/5 shadow-md' 
-      : 'bg-white shadow'
+      ? 'bg-gradient-to-br from-fluxfx-500/10 to-fluxfx-600/5 shadow-md border-fluxfx-100' 
+      : 'bg-white shadow border-slate-100'
   }`}>
     <CardContent className="p-6">
       <div className={`rounded-full p-3 w-12 h-12 flex items-center justify-center mb-4 ${
@@ -100,29 +100,32 @@ const KeyBenefits: React.FC = () => {
 
   return (
     <section id="benefits" className="section-padding relative overflow-hidden bg-gradient-to-b from-white to-slate-50">
+      {/* Decorative elements for Robinhood-inspired look */}
+      <div className="absolute -top-40 right-0 w-96 h-96 rounded-full bg-fluxfx-100/40 blur-3xl" />
+      <div className="absolute -bottom-40 left-0 w-96 h-96 rounded-full bg-fluxfx-100/40 blur-3xl" />
       <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-slate-100/80 to-transparent pointer-events-none" />
       
       <div className="container mx-auto container-padding relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-full bg-fluxfx-100 text-fluxfx-800 mb-4">
+          <span className="inline-flex items-center px-6 py-2.5 text-sm font-medium rounded-full bg-fluxfx-100 text-fluxfx-800 mb-6 shadow-sm">
             Why Choose Flux FX
           </span>
-          <h2 className="heading-lg mb-4">Key Benefits</h2>
+          <h2 className="heading-lg mb-5 text-fluxfx-900">Key Benefits</h2>
           <p className="paragraph max-w-2xl mx-auto">
             Our decentralized trading platform offers unmatched advantages for FX traders seeking sovereignty and superior trading conditions.
           </p>
         </div>
 
         <Tabs defaultValue="primary" className="w-full">
-          <div className="flex justify-center mb-8">
-            <TabsList className="grid grid-cols-2 w-full max-w-md bg-slate-100">
-              <TabsTrigger value="primary" className="text-base">Primary Benefits</TabsTrigger>
-              <TabsTrigger value="all" className="text-base">All Features</TabsTrigger>
+          <div className="flex justify-center mb-10">
+            <TabsList className="grid grid-cols-2 w-full max-w-md bg-slate-100/70 p-1 rounded-full">
+              <TabsTrigger value="primary" className="text-base rounded-full px-8 py-2.5 data-[state=active]:bg-white data-[state=active]:shadow">Primary Benefits</TabsTrigger>
+              <TabsTrigger value="all" className="text-base rounded-full px-8 py-2.5 data-[state=active]:bg-white data-[state=active]:shadow">All Features</TabsTrigger>
             </TabsList>
           </div>
           
-          <TabsContent value="primary" className="mt-0 space-y-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <TabsContent value="primary" className="mt-0 space-y-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {primaryBenefits.map((benefit, index) => (
                 <BenefitCard
                   key={index}
@@ -136,7 +139,7 @@ const KeyBenefits: React.FC = () => {
             <div className="flex justify-center">
               <Button 
                 variant="outline" 
-                className="rounded-full px-6 border-fluxfx-200 hover:bg-fluxfx-50 text-fluxfx-700"
+                className="rounded-full px-8 py-3 border-fluxfx-200 hover:bg-fluxfx-50 text-fluxfx-700 text-base shadow-sm"
                 onClick={handleSeeAllFeaturesClick}
               >
                 See all features
@@ -145,7 +148,7 @@ const KeyBenefits: React.FC = () => {
           </TabsContent>
           
           <TabsContent value="all" className="mt-0">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <BenefitCard
                   key={index}
@@ -159,8 +162,8 @@ const KeyBenefits: React.FC = () => {
           </TabsContent>
         </Tabs>
         
-        <div className="mt-16 text-center">
-          <Button className="bg-fluxfx-600 hover:bg-fluxfx-700 text-white rounded-full px-8 py-6 text-base">
+        <div className="mt-20 text-center">
+          <Button className="bg-fluxfx-600 hover:bg-fluxfx-700 text-white rounded-full px-10 py-7 text-base font-medium shadow-lg">
             Start Trading Now
           </Button>
         </div>

@@ -26,8 +26,8 @@ const Index = () => {
     return (
       <div className="fixed inset-0 bg-fluxfx-900 flex flex-col items-center justify-center z-50">
         <div className="flex items-center mb-8">
-          <span className="text-4xl font-bold text-fluxfx-500">Flux</span>
-          <span className="text-4xl font-bold text-fluxfx-500">FX</span>
+          <span className="text-5xl font-bold text-fluxfx-500">Flux</span>
+          <span className="text-5xl font-bold text-fluxfx-500">FX</span>
         </div>
         <div className="w-16 h-16 border-4 border-fluxfx-200 border-t-fluxfx-500 rounded-full animate-spin"></div>
       </div>
