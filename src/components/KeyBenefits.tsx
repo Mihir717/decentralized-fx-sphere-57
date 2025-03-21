@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { 
   BanknoteIcon,
@@ -9,6 +10,9 @@ import {
   LockIcon,
   GlobeIcon
 } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 interface BenefitCardProps {
   icon: React.ReactNode;
@@ -18,19 +22,21 @@ interface BenefitCardProps {
 }
 
 const BenefitCard: React.FC<BenefitCardProps> = ({ icon, title, description, isHighlighted = false }) => (
-  <div className={`rounded-xl p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 ${
+  <Card className={`h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border-none ${
     isHighlighted 
-      ? 'border border-fluxfx-200 bg-gradient-to-br from-white to-fluxfx-50 shadow-lg' 
-      : 'glass-card'
+      ? 'bg-gradient-to-br from-fluxfx-500/10 to-fluxfx-600/5 shadow-md' 
+      : 'bg-white shadow'
   }`}>
-    <div className={`rounded-full p-3 w-12 h-12 flex items-center justify-center mb-4 ${
-      isHighlighted ? 'bg-fluxfx-600 text-white' : 'bg-fluxfx-100 text-fluxfx-600'
-    }`}>
-      {icon}
-    </div>
-    <h3 className="text-lg font-semibold mb-2">{title}</h3>
-    <p className="text-sm text-muted-foreground">{description}</p>
-  </div>
+    <CardContent className="p-6">
+      <div className={`rounded-full p-3 w-12 h-12 flex items-center justify-center mb-4 ${
+        isHighlighted ? 'bg-fluxfx-600 text-white' : 'bg-fluxfx-100 text-fluxfx-600'
+      }`}>
+        {icon}
+      </div>
+      <h3 className="text-lg font-semibold mb-2">{title}</h3>
+      <p className="text-sm text-muted-foreground">{description}</p>
+    </CardContent>
+  </Card>
 );
 
 const KeyBenefits: React.FC = () => {
@@ -81,9 +87,15 @@ const KeyBenefits: React.FC = () => {
     },
   ];
 
+  // Group benefits into categories for tabs
+  const primaryBenefits = benefits.filter(benefit => benefit.isHighlighted);
+  const secondaryBenefits = benefits.filter(benefit => !benefit.isHighlighted);
+
   return (
-    <section id="benefits" className="section-padding relative overflow-hidden bg-slate-50">
-      <div className="container mx-auto container-padding">
+    <section id="benefits" className="section-padding relative overflow-hidden bg-gradient-to-b from-white to-slate-50">
+      <div className="absolute top-0 left-0 w-full h-64 bg-gradient-to-b from-slate-100/80 to-transparent pointer-events-none" />
+      
+      <div className="container mx-auto container-padding relative z-10">
         <div className="text-center mb-16">
           <span className="inline-flex items-center px-4 py-2 text-sm font-medium rounded-full bg-fluxfx-100 text-fluxfx-800 mb-4">
             Why Choose Flux FX
@@ -94,16 +106,56 @@ const KeyBenefits: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {benefits.map((benefit, index) => (
-            <BenefitCard
-              key={index}
-              icon={benefit.icon}
-              title={benefit.title}
-              description={benefit.description}
-              isHighlighted={benefit.isHighlighted}
-            />
-          ))}
+        <Tabs defaultValue="primary" className="w-full">
+          <div className="flex justify-center mb-8">
+            <TabsList className="grid grid-cols-2 w-full max-w-md bg-slate-100">
+              <TabsTrigger value="primary" className="text-base">Primary Benefits</TabsTrigger>
+              <TabsTrigger value="all" className="text-base">All Features</TabsTrigger>
+            </TabsList>
+          </div>
+          
+          <TabsContent value="primary" className="mt-0 space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {primaryBenefits.map((benefit, index) => (
+                <BenefitCard
+                  key={index}
+                  icon={benefit.icon}
+                  title={benefit.title}
+                  description={benefit.description}
+                  isHighlighted={benefit.isHighlighted}
+                />
+              ))}
+            </div>
+            <div className="flex justify-center">
+              <Button 
+                variant="outline" 
+                className="rounded-full px-6 border-fluxfx-200 hover:bg-fluxfx-50 text-fluxfx-700"
+                onClick={() => document.querySelector('[data-value="all"]')?.click()}
+              >
+                See all features
+              </Button>
+            </div>
+          </TabsContent>
+          
+          <TabsContent value="all" className="mt-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <BenefitCard
+                  key={index}
+                  icon={benefit.icon}
+                  title={benefit.title}
+                  description={benefit.description}
+                  isHighlighted={benefit.isHighlighted}
+                />
+              ))}
+            </div>
+          </TabsContent>
+        </Tabs>
+        
+        <div className="mt-16 text-center">
+          <Button className="bg-fluxfx-600 hover:bg-fluxfx-700 text-white rounded-full px-8 py-6 text-base">
+            Start Trading Now
+          </Button>
         </div>
       </div>
     </section>

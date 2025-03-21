@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
-import PriceTicker from '@/components/PriceTicker';
 import HeroSection from '@/components/HeroSection';
 import TradingAssets from '@/components/TradingAssets';
 import DecentralizedEngine from '@/components/DecentralizedEngine';
