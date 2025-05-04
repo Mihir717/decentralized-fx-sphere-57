@@ -49,6 +49,12 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
+                <a href="#pricing-spreads" className="text-slate-400 hover:text-white transition-colors inline-flex items-center">
+                  <ChevronRight className="h-3 w-3 mr-2" />
+                  Pricing & Spreads
+                </a>
+              </li>
+              <li>
                 <a href="#trading-engine" className="text-slate-400 hover:text-white transition-colors inline-flex items-center">
                   <ChevronRight className="h-3 w-3 mr-2" />
                   Trading Engine

@@ -38,6 +38,9 @@ const Navbar = () => {
             <a href="#trading-assets" className="text-sm font-medium hover:text-fluxfx-600 transition-colors">
               Trading Assets
             </a>
+            <a href="#pricing-spreads" className="text-sm font-medium hover:text-fluxfx-600 transition-colors">
+              Pricing & Spreads
+            </a>
             <a href="#trading-engine" className="text-sm font-medium hover:text-fluxfx-600 transition-colors">
               Trading Engine
             </a>
@@ -79,6 +82,9 @@ const Navbar = () => {
           <div className="px-4 pt-2 pb-6 space-y-4">
             <a href="#trading-assets" className="block py-2 text-base font-medium hover:text-fluxfx-600" onClick={() => setIsMenuOpen(false)}>
               Trading Assets
+            </a>
+            <a href="#pricing-spreads" className="block py-2 text-base font-medium hover:text-fluxfx-600" onClick={() => setIsMenuOpen(false)}>
+              Pricing & Spreads
             </a>
             <a href="#trading-engine" className="block py-2 text-base font-medium hover:text-fluxfx-600" onClick={() => setIsMenuOpen(false)}>
               Trading Engine

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import TradingAssets from '@/components/TradingAssets';
+import PricingSpreads from '@/components/PricingSpreads';
 import DecentralizedEngine from '@/components/DecentralizedEngine';
 import KeyBenefits from '@/components/KeyBenefits';
 import Security from '@/components/Security';
@@ -40,6 +41,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <TradingAssets />
+        <PricingSpreads />
         <DecentralizedEngine />
         <KeyBenefits />
         <Security />
