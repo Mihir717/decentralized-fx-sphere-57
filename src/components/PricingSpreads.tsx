@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -84,6 +85,14 @@ const PricingSpreads: React.FC = () => {
       short: '1.3'
     }
   }];
+  
+  // No spreads currency pairs
+  const noSpreadsCurrencyPairs = [
+    { pair: 'EUR/USD', spread: 'No spreads' },
+    { pair: 'JPY/USD', spread: 'No spreads' },
+    { pair: 'GBP/USD', spread: 'No spreads' },
+  ];
+
   return <section id="pricing-spreads" className="section-padding bg-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-fluxfx-50 filter blur-3xl opacity-60 z-0"></div>
@@ -145,14 +154,35 @@ const PricingSpreads: React.FC = () => {
           </div>
         </div>
 
-        
-        
         <div className="mt-12 text-center">
           <p className="text-sm text-slate-500 max-w-2xl mx-auto">
-        </p>
+          </p>
           <a href="#" className="inline-block mt-6 text-fluxfx-600 hover:text-fluxfx-700 font-medium">
             View Complete Fee Schedule
           </a>
+        </div>
+        
+        {/* New Spreads Table */}
+        <div className="mt-10 max-w-3xl mx-auto">
+          <h3 className="text-xl font-semibold mb-4 text-center">Spreads</h3>
+          <div className="bg-white p-6 rounded-xl shadow-lg border border-slate-200">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Currency Pair</TableHead>
+                  <TableHead>Spread</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {noSpreadsCurrencyPairs.map((pair) => (
+                  <TableRow key={pair.pair}>
+                    <TableCell className="font-medium">{pair.pair}</TableCell>
+                    <TableCell className="text-fluxfx-600 font-semibold">{pair.spread}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+          </div>
         </div>
       </div>
     </section>;
