@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { RefreshCw, DollarSign, Euro, PoundSterling, JapaneseYen, TrendingUp, Droplet, Gem, Bitcoin } from 'lucide-react';
 import PriceTicker from './PriceTicker';
@@ -100,30 +101,19 @@ const TradingAssets: React.FC = () => {
               <h3 className="heading-md">Commodities</h3>
             </div>
             
-            <div className="lg:flex lg:items-stretch gap-8 mb-12">
-              <div className="lg:w-1/3 mb-8 lg:mb-0">
-                <div className="glass-card rounded-xl h-full overflow-hidden shadow-md">
-                  
-                  
-                </div>
-              </div>
-              
-              <div className="lg:w-2/3">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  {commodities.map((commodity, index) => <div key={commodity.name} className="glass-card rounded-xl p-6 transition-all duration-300 hover:shadow-xl relative overflow-hidden">
-                      <div className="absolute -right-12 -bottom-12 w-32 h-32 opacity-5 z-0">
-                        <div className="w-full h-full bg-fluxfx-600 rounded-full"></div>
-                      </div>
-                      <div className="flex items-center mb-4 relative z-10">
-                        {commodity.icon}
-                        <div className="ml-4">
-                          <h4 className="font-bold text-lg">{commodity.name}</h4>
-                          <p className="text-sm text-muted-foreground">{commodity.description}</p>
-                        </div>
-                      </div>
-                    </div>)}
-                </div>
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {commodities.map((commodity, index) => <div key={commodity.name} className="glass-card rounded-xl p-6 transition-all duration-300 hover:shadow-xl relative overflow-hidden">
+                  <div className="absolute -right-12 -bottom-12 w-32 h-32 opacity-5 z-0">
+                    <div className="w-full h-full bg-fluxfx-600 rounded-full"></div>
+                  </div>
+                  <div className="flex items-center mb-4 relative z-10">
+                    {commodity.icon}
+                    <div className="ml-4">
+                      <h4 className="font-bold text-lg">{commodity.name}</h4>
+                      <p className="text-sm text-muted-foreground">{commodity.description}</p>
+                    </div>
+                  </div>
+                </div>)}
             </div>
           </div>
         </div>
