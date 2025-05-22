@@ -1,6 +1,5 @@
-
 import React, { useEffect, useRef } from 'react';
-import { Smartphone, Monitor, Tablet, Laptop } from 'lucide-react';
+import { Smartphone, Monitor, Laptop } from 'lucide-react';
 
 const Platforms: React.FC = () => {
   const deviceRef = useRef<HTMLDivElement>(null);
@@ -65,16 +64,6 @@ const Platforms: React.FC = () => {
                 <h3 className="text-lg font-semibold mb-2">Web Platform</h3>
                 <p className="text-sm text-slate-400">
                   Access advanced charting tools and full trading functionality through our web application.
-                </p>
-              </div>
-              
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800 transition-all">
-                <div className="rounded-full p-3 w-12 h-12 flex items-center justify-center bg-fluxfx-900 text-fluxfx-400 mb-4">
-                  <Tablet className="h-6 w-6" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Tablet Optimized</h3>
-                <p className="text-sm text-slate-400">
-                  Enjoy an optimized trading experience on tablet devices with touch-friendly interfaces.
                 </p>
               </div>
               

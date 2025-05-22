@@ -7,10 +7,10 @@ const DecentralizedEngine: React.FC = () => {
   
   const tabs = [
     {
-      title: 'Peer-to-Peer Trading',
+      title: 'Liquidity Provider Model',
       icon: <Network className="w-5 h-5" />,
-      description: 'Eliminate intermediaries with direct peer-to-peer trading. Trades are executed directly between users, removing traditional middlemen and reducing costs.',
-      benefits: ['Lower transaction costs', 'No central point of failure', 'Greater transparency']
+      description: 'Connect to deep institutional liquidity pools. Trades are executed through a network of global liquidity providers, ensuring optimal execution prices.',
+      benefits: ['Reduced slippage', 'Deep market access', 'Competitive pricing']
     },
     {
       title: 'Smart Contract Security',

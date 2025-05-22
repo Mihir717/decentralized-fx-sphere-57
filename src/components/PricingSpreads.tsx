@@ -1,16 +1,18 @@
-
 import React, { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCaption, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { ChevronDown, ChevronUp, Banknote, Gem } from 'lucide-react';
+
 const PricingSpreads: React.FC = () => {
   const [expandedItems, setExpandedItems] = useState<Record<string, boolean>>({});
+  
   const toggleItem = (key: string) => {
     setExpandedItems(prev => ({
       ...prev,
       [key]: !prev[key]
     }));
   };
+  
   const currencyPricing = [{
     pair: 'EUR/USD',
     spread: '0.2 pips',
@@ -48,6 +50,7 @@ const PricingSpreads: React.FC = () => {
       short: '0.5'
     }
   }];
+  
   const commodityPricing = [{
     asset: 'XAU/USD (Gold)',
     spread: '20 pips',
@@ -74,15 +77,6 @@ const PricingSpreads: React.FC = () => {
     swap: {
       long: '-4.3',
       short: '1.4'
-    }
-  }, {
-    asset: 'BRENT/USD (Brent Oil)',
-    spread: '5 pips',
-    commission: 'None',
-    leverage: 'Up to 1:100',
-    swap: {
-      long: '-4.1',
-      short: '1.3'
     }
   }];
   
@@ -187,4 +181,5 @@ const PricingSpreads: React.FC = () => {
       </div>
     </section>;
 };
+
 export default PricingSpreads;

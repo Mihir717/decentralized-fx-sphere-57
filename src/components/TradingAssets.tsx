@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   RefreshCw, 
@@ -29,7 +28,6 @@ const commodities = [
   { name: 'XAU/USD', description: 'Gold / US Dollar', icon: <Gem className="w-8 h-8 text-fluxfx-600" /> },
   { name: 'XAG/USD', description: 'Silver / US Dollar', icon: <Bitcoin className="w-8 h-8 text-fluxfx-600" /> },
   { name: 'WTI/USD', description: 'Crude Oil WTI / US Dollar', icon: <Droplet className="w-8 h-8 text-fluxfx-600" /> },
-  { name: 'BRENT/USD', description: 'Crude Oil Brent / US Dollar', icon: <Droplet className="w-8 h-8 text-fluxfx-600" /> },
 ];
 
 const TradingAssets: React.FC = () => {
