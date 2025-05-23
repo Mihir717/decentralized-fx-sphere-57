@@ -35,7 +35,7 @@ const HeroSection: React.FC = () => {
 
       {/* Subtle forex chart patterns - decorative, positioned behind content */}
       <div className="absolute right-0 top-20 opacity-10 w-1/3 h-1/3 overflow-hidden z-0">
-        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1200&auto=format&fit=crop" alt="" className="w-full h-full object-cover" />
+        
       </div>
       <div className="absolute left-0 bottom-20 opacity-10 w-1/4 h-1/4 overflow-hidden z-0">
         <img src="https://images.unsplash.com/photo-1535320903710-d993d3d77d29?q=80&w=1000&auto=format&fit=crop" alt="" className="w-full h-full object-cover" />

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { RefreshCw, DollarSign, Euro, PoundSterling, JapaneseYen, TrendingUp, Droplet, Gem, Bitcoin } from 'lucide-react';
 import PriceTicker from './PriceTicker';
@@ -53,7 +52,7 @@ const TradingAssets: React.FC = () => {
   return <section id="trading-assets" className="section-padding bg-slate-50 relative overflow-hidden">
       {/* Subtle trading-related background imagery */}
       <div className="absolute top-0 right-0 w-full md:w-1/2 h-64 opacity-5 z-0 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1500&auto=format&fit=crop" alt="" className="w-full h-full object-cover" />
+        
       </div>
       
       <div className="absolute bottom-0 left-0 w-full md:w-1/3 h-64 opacity-5 z-0 overflow-hidden">
