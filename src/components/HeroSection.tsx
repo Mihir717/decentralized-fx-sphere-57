@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => {
   return (
     <section 
       ref={heroRef} 
-      className="relative pt-24 pb-16 min-h-screen flex flex-col justify-center overflow-hidden px-4 sm:px-6 lg:px-8" 
+      className="relative pt-24 pb-16 min-h-screen flex flex-col justify-center overflow-hidden px-2 sm:px-4" 
       style={{
         '--x-offset': '0px',
         '--y-offset': '0px'
@@ -66,8 +66,8 @@ const HeroSection: React.FC = () => {
         }} 
       />
 
-      <div className="w-full max-w-7xl mx-auto relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
+      <div className="w-full mx-auto relative z-10">
+        <div className="w-full text-center">
           {/* Enhanced FluxFX logo - dark blue */}
           <div className="mb-10 flex items-center justify-center">
             <div className="inline-flex items-center py-3 px-6">
@@ -83,7 +83,7 @@ const HeroSection: React.FC = () => {
             Decentralising the Centralised
           </h1>
           
-          <p className="paragraph mt-6 max-w-3xl mx-auto animate-fade-in-up" style={{
+          <p className="paragraph mt-6 mx-auto animate-fade-in-up" style={{
             animationDelay: '400ms'
           }}>
             Trade Forex & Commodities with complete transparency, security, and no intermediaries. Experience the future of decentralized FX trading
@@ -101,7 +101,7 @@ const HeroSection: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-3 max-w-6xl mx-auto animate-fade-in-up" style={{
+        <div className="mt-20 grid grid-cols-1 gap-6 sm:grid-cols-3 mx-auto animate-fade-in-up" style={{
           animationDelay: '800ms'
         }}>
           <div className="glass-card rounded-xl p-6 text-center hover:shadow-xl transition-all duration-300 hover:scale-105">
