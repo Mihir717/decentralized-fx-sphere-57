@@ -99,6 +99,9 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased selection:bg-fluxfx-500/20 selection:text-fluxfx-700;
+    margin: 0;
+    padding: 0;
+    width: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -132,7 +135,7 @@
   }
   
   .container-padding {
-    @apply px-4 sm:px-6 lg:px-8;
+    @apply px-4 sm:px-6 lg:px-12 xl:px-16;
   }
   
   .btn-primary {
