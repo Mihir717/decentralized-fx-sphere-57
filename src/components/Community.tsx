@@ -1,16 +1,13 @@
-
 import React from 'react';
 import { MessageSquare, Twitter, Users, ChevronRight } from 'lucide-react';
-
 const Community: React.FC = () => {
-  return (
-    <section id="community" className="section-padding bg-white relative overflow-hidden">
+  return <section id="community" className="section-padding bg-white relative overflow-hidden">
       {/* Decorative background */}
       <div className="absolute inset-0 bg-grid opacity-20 z-0"></div>
       
       <div className="container mx-auto container-padding relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-fluxfx-100 text-fluxfx-800 mb-4">
+          <span className="inline-flex items-center font-medium rounded-full bg-fluxfx-100 text-fluxfx-800 mb-4 px-[16px] py-[8px] text-xl">
             Join Us
           </span>
           <h2 className="heading-lg mb-4">Community & Support</h2>
@@ -87,15 +84,8 @@ const Community: React.FC = () => {
             </p>
             
             <form className="flex flex-col sm:flex-row gap-3">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 bg-white px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-fluxfx-500 focus:border-transparent"
-              />
-              <button
-                type="submit"
-                className="bg-fluxfx-600 hover:bg-fluxfx-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
-              >
+              <input type="email" placeholder="Enter your email" className="flex-1 bg-white px-4 py-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-fluxfx-500 focus:border-transparent" />
+              <button type="submit" className="bg-fluxfx-600 hover:bg-fluxfx-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
                 Subscribe
               </button>
             </form>
@@ -106,8 +96,6 @@ const Community: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Community;

@@ -1,16 +1,13 @@
-
 import React from 'react';
 import { Shield, LockKeyhole, Code, CheckCircle, AlertTriangle } from 'lucide-react';
-
 const Security: React.FC = () => {
-  return (
-    <section id="security" className="section-padding relative overflow-hidden">
+  return <section id="security" className="section-padding relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-fluxfx-50/40 to-transparent opacity-60 z-0"></div>
       
       <div className="container mx-auto container-padding relative z-10">
         <div className="max-w-3xl mx-auto">
-          <span className="inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-fluxfx-100 text-fluxfx-800 mb-4">
+          <span className="inline-flex items-center font-medium rounded-full bg-fluxfx-100 text-fluxfx-800 mb-4 px-[16px] py-[8px] text-xl">
             Trust & Security
           </span>
           <h2 className="heading-lg mb-6">Uncompromising Security</h2>
@@ -63,8 +60,6 @@ const Security: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Security;

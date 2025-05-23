@@ -1,30 +1,22 @@
 import React, { useEffect, useRef } from 'react';
 import { Smartphone, Monitor, Laptop } from 'lucide-react';
-
 const Platforms: React.FC = () => {
   const deviceRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
     const handleScroll = () => {
       if (!deviceRef.current) return;
-      
       const rect = deviceRef.current.getBoundingClientRect();
       const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-      
       if (isVisible) {
-        const scrollPercent = 1 - (rect.top / window.innerHeight);
+        const scrollPercent = 1 - rect.top / window.innerHeight;
         const rotateY = Math.min(scrollPercent * 10, 5);
-        
         deviceRef.current.style.transform = `perspective(1000px) rotateY(${rotateY}deg)`;
       }
     };
-    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  return (
-    <section id="platforms" className="section-padding bg-slate-900 text-white relative overflow-hidden">
+  return <section id="platforms" className="section-padding bg-slate-900 text-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 right-0 w-full h-full bg-grid"></div>
@@ -35,7 +27,7 @@ const Platforms: React.FC = () => {
       
       <div className="container mx-auto container-padding relative z-10">
         <div className="text-center mb-16">
-          <span className="inline-flex items-center px-3 py-1 text-xs font-medium rounded-full bg-fluxfx-800 text-fluxfx-100 mb-4">
+          <span className="inline-flex items-center font-medium rounded-full bg-fluxfx-800 text-fluxfx-100 mb-4 px-[16px] py-[8px] text-xl">
             Trade Anywhere
           </span>
           <h2 className="heading-lg mb-4 text-white">Mobile & Web Accessibility</h2>
@@ -83,19 +75,19 @@ const Platforms: React.FC = () => {
               <div className="flex flex-wrap gap-4">
                 <a href="#" className="inline-flex items-center justify-center rounded-md bg-slate-800 px-6 py-3 text-base font-medium text-white hover:bg-slate-700 transition-all duration-200">
                   <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.24 3.51 7.59 8.42 7.31c1.33.07 2.25.8 3.06.84.82.04 2.05-.65 3.47-.55 2.09.18 3.65 1.21 4.62 3.25-4.06 2.46-3.38 8.17.48 9.43-.88 1.96-2.02 3.04-3 4zm-1.84-17.3c-1.41 1.58-1.19 4.06-.03 5.28 1.26-1.4 1.19-3.92-.03-5.28z"/>
+                    <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.24 3.51 7.59 8.42 7.31c1.33.07 2.25.8 3.06.84.82.04 2.05-.65 3.47-.55 2.09.18 3.65 1.21 4.62 3.25-4.06 2.46-3.38 8.17.48 9.43-.88 1.96-2.02 3.04-3 4zm-1.84-17.3c-1.41 1.58-1.19 4.06-.03 5.28 1.26-1.4 1.19-3.92-.03-5.28z" />
                   </svg>
                   iOS App
                 </a>
                 <a href="#" className="inline-flex items-center justify-center rounded-md bg-slate-800 px-6 py-3 text-base font-medium text-white hover:bg-slate-700 transition-all duration-200">
                   <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M3 3h18v18H3V3m12.71 7.28l-8-8h-.82L9.82 8l-5 5 5 5 1.93 5.72h.82l-8-8 8-5.72m-.89 1.13L7.73 13l6.37 6.43.56.57h.34l1.5-2.28.4-.61c.36-.54.5-.92.5-1.68 0-.96-.32-1.31-.73-1.76-.3-.33-.55-.67-.55-1.24 0-.57.25-.91.54-1.23.43-.44.75-.8.75-1.76 0-.76-.14-1.14-.5-1.69l-.4-.61-1.5-2.28h-.34l-.55.57z"/>
+                    <path d="M3 3h18v18H3V3m12.71 7.28l-8-8h-.82L9.82 8l-5 5 5 5 1.93 5.72h.82l-8-8 8-5.72m-.89 1.13L7.73 13l6.37 6.43.56.57h.34l1.5-2.28.4-.61c.36-.54.5-.92.5-1.68 0-.96-.32-1.31-.73-1.76-.3-.33-.55-.67-.55-1.24 0-.57.25-.91.54-1.23.43-.44.75-.8.75-1.76 0-.76-.14-1.14-.5-1.69l-.4-.61-1.5-2.28h-.34l-.55.57z" />
                   </svg>
                   Android App
                 </a>
                 <a href="#" className="inline-flex items-center justify-center rounded-md bg-slate-800 px-6 py-3 text-base font-medium text-white hover:bg-slate-700 transition-all duration-200">
                   <svg className="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M3 3v18h18V3H3m15 15H6V6h12v12z"/>
+                    <path d="M3 3v18h18V3H3m15 15H6V6h12v12z" />
                   </svg>
                   Web Platform
                 </a>
@@ -148,20 +140,12 @@ const Platforms: React.FC = () => {
                         {/* Simulated chart */}
                         <div className="h-28 w-full relative overflow-hidden">
                           <svg className="w-full h-full" viewBox="0 0 100 40">
-                            <path
-                              d="M0,20 L5,23 L10,21 L15,24 L20,19 L25,18 L30,22 L35,25 L40,23 L45,26 L50,24 L55,29 L60,27 L65,28 L70,26 L75,25 L80,28 L85,27 L90,24 L95,21 L100,20"
-                              fill="none"
-                              stroke="#3f87ff"
-                              strokeWidth="1.5"
-                            />
+                            <path d="M0,20 L5,23 L10,21 L15,24 L20,19 L25,18 L30,22 L35,25 L40,23 L45,26 L50,24 L55,29 L60,27 L65,28 L70,26 L75,25 L80,28 L85,27 L90,24 L95,21 L100,20" fill="none" stroke="#3f87ff" strokeWidth="1.5" />
                             <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
                               <stop offset="0%" stopColor="#3f87ff" stopOpacity="0.3" />
                               <stop offset="100%" stopColor="#3f87ff" stopOpacity="0" />
                             </linearGradient>
-                            <path
-                              d="M0,20 L5,23 L10,21 L15,24 L20,19 L25,18 L30,22 L35,25 L40,23 L45,26 L50,24 L55,29 L60,27 L65,28 L70,26 L75,25 L80,28 L85,27 L90,24 L95,21 L100,20 V40 H0 Z"
-                              fill="url(#chartGradient)"
-                            />
+                            <path d="M0,20 L5,23 L10,21 L15,24 L20,19 L25,18 L30,22 L35,25 L40,23 L45,26 L50,24 L55,29 L60,27 L65,28 L70,26 L75,25 L80,28 L85,27 L90,24 L95,21 L100,20 V40 H0 Z" fill="url(#chartGradient)" />
                           </svg>
                         </div>
                       </div>
@@ -232,8 +216,6 @@ const Platforms: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Platforms;
