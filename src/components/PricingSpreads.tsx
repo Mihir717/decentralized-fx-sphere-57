@@ -113,7 +113,7 @@ const PricingSpreads: React.FC = () => {
               <ul className="space-y-4">
                 <li className="flex justify-between items-center text-sm">
                   <span className="text-slate-700">Open Fee:</span>
-                  <span className="font-medium text-fluxfx-800">0.1%</span>
+                  <span className="font-medium text-fluxfx-800">0.01%</span>
                 </li>
                 <li className="flex justify-between items-center text-sm">
                   <span className="text-slate-700">Close Fee:</span>
@@ -133,11 +133,11 @@ const PricingSpreads: React.FC = () => {
               <ul className="space-y-4">
                 <li className="flex justify-between items-center text-sm">
                   <span className="text-slate-700">Open Fee:</span>
-                  <span className="font-medium text-fluxfx-800">0.15%</span>
+                  <span className="font-medium text-fluxfx-800">0.08%</span>
                 </li>
                 <li className="flex justify-between items-center text-sm">
                   <span className="text-slate-700">Close Fee:</span>
-                  <span className="font-medium text-fluxfx-800">0.05%</span>
+                  <span className="font-medium text-fluxfx-800">0.08%</span>
                 </li>
                 <li className="flex justify-between items-center text-sm">
                   <span className="text-slate-700">Overnight Funding:</span>
