@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { TrendingUp, BarChart3 } from 'lucide-react';
-
 const GrowingEcosystem: React.FC = () => {
-  return (
-    <section className="py-16 bg-gradient-to-br from-fluxfx-50 to-white relative overflow-hidden">
+  return <section className="py-16 bg-gradient-to-br from-fluxfx-50 to-white relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-fluxfx-100 filter blur-3xl opacity-40 z-0"></div>
       
@@ -21,7 +18,7 @@ const GrowingEcosystem: React.FC = () => {
               </div>
             </div>
             <h3 className="text-xl font-semibold mb-2 text-fluxfx-800">Total Traded Volume</h3>
-            <p className="text-3xl font-bold text-fluxfx-600">+$7 Billion</p>
+            <p className="text-3xl font-bold text-fluxfx-600">$7 Billion +</p>
           </div>
           
           <div className="glass-card rounded-xl p-8 text-center hover:shadow-xl transition-all duration-300 hover:scale-105">
@@ -31,12 +28,10 @@ const GrowingEcosystem: React.FC = () => {
               </div>
             </div>
             <h3 className="text-xl font-semibold mb-2 text-fluxfx-800">Total Trades</h3>
-            <p className="text-3xl font-bold text-fluxfx-600">+1.3 Million</p>
+            <p className="text-3xl font-bold text-fluxfx-600">1.3 Million + </p>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default GrowingEcosystem;
