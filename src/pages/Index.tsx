@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import TradingAssets from '@/components/TradingAssets';
 import PricingSpreads from '@/components/PricingSpreads';
+import GrowingEcosystem from '@/components/GrowingEcosystem';
 import DecentralizedEngine from '@/components/DecentralizedEngine';
 import KeyBenefits from '@/components/KeyBenefits';
 import Security from '@/components/Security';
@@ -42,6 +43,7 @@ const Index = () => {
         <HeroSection />
         <TradingAssets />
         <PricingSpreads />
+        <GrowingEcosystem />
         <DecentralizedEngine />
         <KeyBenefits />
         <Security />
